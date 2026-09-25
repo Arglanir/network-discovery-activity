@@ -46,4 +46,4 @@ while True:
     if texte.strip():
         msg_brut = f"{pseudo}: {texte}"
         # On envoie !
-        sock.sendto(msg_brut.encode('utf-8'), ('<broadcast>', PORT))
+        sock.sendto(msg_brut.encode('utf-8'), ('127.255.255.255', PORT)) # <broadcast> est peut-être bloqué
